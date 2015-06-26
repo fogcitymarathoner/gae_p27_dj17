@@ -1,4 +1,18 @@
 # Django settings for p27_d17 project.
+import os
+import sys
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+#
+# BASE_DIR is useless as it is one directory above the one with manage.py
+PROJECT_DIR = os.path.join(os.path.dirname(__file__))
+APPS_DIR = os.path.join(PROJECT_DIR, 'apps')
+
+"""
+STATIC_ROOT = '/var/www/dj17.fogtest.com.static' # fixme over written below
+STATICFILES_DIRS = ( # fixme over written below
+    os.path.join(PROJECT_DIR, 'static'),
+)
+"""
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -102,12 +116,11 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'p27_d17.urls'
+ROOT_URLCONF = 'p27_d17_prj.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'p27_d17.wsgi.application'
+WSGI_APPLICATION = 'p27_d17_prj.wsgi.application'
 
-import os
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
 INSTALLED_APPS = (
@@ -121,7 +134,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'hello',
+    'clients',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

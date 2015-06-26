@@ -1,5 +1,5 @@
 import os,sys
-os.environ['DJANGO_SETTINGS_MODULE'] = 'p27_d17.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'p27_d17_prj.settings'
 
 # Force Django to reload its settings.
 from django.conf import settings

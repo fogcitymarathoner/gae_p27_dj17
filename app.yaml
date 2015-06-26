@@ -6,7 +6,7 @@ threadsafe: true
 
 handlers:
 - url: .*
-  script: p27_d17.wsgi.application
+  script: p27_d17_prj.wsgi.application
 
 libraries:
 - name: django
